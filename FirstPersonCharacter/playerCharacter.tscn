@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c43ipdmwtvu2j"]
+
+[ext_resource type="Script" uid="uid://bsjf0mjt7r82e" path="res://FirstPersonCharacter/playerCharacter.gd" id="1_u4713"]
+[ext_resource type="PackedScene" uid="uid://desnfpdfm7ss" path="res://Interaction/interact_ray.tscn" id="2_c7ura"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5up26"]
+
+[node name="playerCharacter" type="CharacterBody3D" unique_id=1090924676]
+collision_layer = 2
+script = ExtResource("1_u4713")
+
+[node name="MainCollider" type="CollisionShape3D" parent="." unique_id=1306185719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_5up26")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1919986345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=1223233876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.052189708, 0)
+fov = 90.0
+
+[node name="InteractRay" parent="CameraPivot/Camera3D" unique_id=1280450289 instance=ExtResource("2_c7ura")]
+target_position = Vector3(0, 0, -2)
+
+[node name="HeadCheck" type="RayCast3D" parent="CameraPivot" unique_id=1410651965]
+enabled = false
+target_position = Vector3(0, 0.75, 0)

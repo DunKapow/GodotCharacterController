@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://desnfpdfm7ss"]
+
+[ext_resource type="Script" uid="uid://djb6vhbxywp37" path="res://Interaction/interact_ray.gd" id="1_8pjae"]
+
+[node name="InteractRay" type="RayCast3D" unique_id=1280450289]
+target_position = Vector3(0, 0, -4)
+collision_mask = 16
+script = ExtResource("1_8pjae")
+
+[node name="Label" type="Label" parent="." unique_id=273303962]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 15.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Prompt"
+horizontal_alignment = 1
+vertical_alignment = 1

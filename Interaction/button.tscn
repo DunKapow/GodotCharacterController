@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b2f52e0srftwf"]
+
+[ext_resource type="PackedScene" uid="uid://cjkatcol1al0c" path="res://Interaction/button.blend" id="1_g3vfg"]
+[ext_resource type="Script" uid="uid://buya1w4j41a6t" path="res://Interaction/interactable_component.gd" id="2_hiscg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g3vfg"]
+size = Vector3(0.45, 0.3, 0.45)
+
+[node name="button" type="StaticBody3D" unique_id=1435071233]
+collision_layer = 17
+collision_mask = 16
+script = ExtResource("2_hiscg")
+
+[node name="button" parent="." unique_id=1924726462 instance=ExtResource("1_g3vfg")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=500149641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05336915, 0)
+shape = SubResource("BoxShape3D_g3vfg")
